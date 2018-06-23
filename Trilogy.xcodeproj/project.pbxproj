@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5260CF3420DEE6BD0090CE28 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260CF3320DEE6BD0090CE28 /* LandingController.swift */; };
 		52A8E1D520CF044000B3AE3F /* li-ios-sdk-1.0.7-release in Resources */ = {isa = PBXBuildFile; fileRef = 52A8E1D420CF044000B3AE3F /* li-ios-sdk-1.0.7-release */; };
 		52A8E1D720CF078200B3AE3F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8E1D620CF078200B3AE3F /* WebViewController.swift */; };
 		52CC96AE20D3583E00113316 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC96AD20D3583E00113316 /* NextViewController.swift */; };
@@ -47,6 +48,7 @@
 		063BEE2E98A21D386DEE17EF /* Pods-TrilogyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrilogyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrilogyTests/Pods-TrilogyTests.release.xcconfig"; sourceTree = "<group>"; };
 		2AFE6DC9DE6345E4D62333A1 /* Pods-Trilogy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trilogy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trilogy/Pods-Trilogy.debug.xcconfig"; sourceTree = "<group>"; };
 		35B8EC419ABA5D0F528BE8EF /* Pods_TrilogyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrilogyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5260CF3320DEE6BD0090CE28 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		52A8E1D420CF044000B3AE3F /* li-ios-sdk-1.0.7-release */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "li-ios-sdk-1.0.7-release"; path = "../../li-ios-sdk-1.0.7-release"; sourceTree = "<group>"; };
 		52A8E1D620CF078200B3AE3F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		52CC96AD20D3583E00113316 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				52CC96AD20D3583E00113316 /* NextViewController.swift */,
+				5260CF3320DEE6BD0090CE28 /* LandingController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				52F50DCE20CECB4100F626F6 /* ViewController.swift in Sources */,
 				52CC96AE20D3583E00113316 /* NextViewController.swift in Sources */,
 				52A8E1D720CF078200B3AE3F /* WebViewController.swift in Sources */,
+				5260CF3420DEE6BD0090CE28 /* LandingController.swift in Sources */,
 				52F50DCC20CECB4100F626F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -57,8 +57,12 @@ class NextViewController: UIViewController {
         let owner_text = UILabel()
         tenant_text.text="For Tenants"
         owner_text.text="For Owners"
+        owner_text.font = UIFont(name: "Futura-CondensedExtraBold", size: 18)
+        tenant_text.font = UIFont(name: "Futura-CondensedExtraBold", size: 18)
         tenant_text.translatesAutoresizingMaskIntoConstraints=false;
         owner_text.translatesAutoresizingMaskIntoConstraints=false;
+        owner_text.textColor = UIColor.white
+        tenant_text.textColor = UIColor.white
         
         let views:[String:AnyObject] = ["textlabel":textlabel,"infolabel":infolabel,"custom":custom,"tenant":imageviewtenants,"owner":imageviewowners,"tenant_text":tenant_text,"owner_text":owner_text]
         self.view.addSubview(textlabel)
@@ -68,6 +72,9 @@ class NextViewController: UIViewController {
         self.view.addSubview(imageviewowners)
         self.view.addSubview(tenant_text)
         self.view.addSubview(owner_text)
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(NextViewController.tapDetected))
+        imageviewtenants.isUserInteractionEnabled=true
+        imageviewtenants.addGestureRecognizer(singleTap)
         
         let hori = NSLayoutConstraint.constraints(withVisualFormat:"V:|-55-[textlabel]-20-[infolabel]-15-[custom]" , options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views:views)
       
@@ -81,12 +88,8 @@ class NextViewController: UIViewController {
         
         let vert6 = NSLayoutConstraint.constraints(withVisualFormat:"H:[tenant]-100-[owner(100@1000)]" , options:.alignAllCenterY, metrics:nil, views:views)
         let vert7 = NSLayoutConstraint.constraints(withVisualFormat:"V:[tenant]-6-[tenant_text]" , options:.alignAllCenterX, metrics:nil, views:views)
-//        let vert7 = NSLayoutConstraint.constraints(withVisualFormat:"H:[custom]-100-[tenant]" , options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views:views)
-//         let vert8 = NSLayoutConstraint.constraints(withVisualFormat:"H:|-1-[tenant_text(40@1000)]" , options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views:views)
-//        let vert9 = NSLayoutConstraint.constraints(withVisualFormat:"V:[tenant]-12-[tenant_text(12@1000)]" , options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views:views)
-//        let vert10 = NSLayoutConstraint.constraints(withVisualFormat:"H:[owner_text(40@1000)]-12-|" , options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views:views)
-//        let vert11 = NSLayoutConstraint.constraints(withVisualFormat:"V:[owner]-12-[owner_text(40@1000)]" , options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views:views)
-        
+        let vert8 = NSLayoutConstraint.constraints(withVisualFormat:"H:[tenant_text]-110-[owner_text]" , options:.alignAllCenterY, metrics:nil, views:views)
+
         self.view.addConstraints(vert)
         self.view.addConstraints(hori)
         self.view.addConstraints(vert2)
@@ -95,11 +98,7 @@ class NextViewController: UIViewController {
         self.view.addConstraints(vert5)
         self.view.addConstraints(vert6)
         self.view.addConstraints(vert7)
-//        self.view.addConstraints(vert8)
-//        self.view.addConstraints(vert9)
-//        self.view.addConstraints(vert10)
-//        self.view.addConstraints(vert11)
-        // Do any additional setup after loading the view.
+        self.view.addConstraints(vert8)
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,15 +106,13 @@ class NextViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func tapDetected() {
+        DispatchQueue.main.async {
+            let main = UIStoryboard(name:"Main" , bundle:nil)
+            let controller = main.instantiateViewController(withIdentifier: "land")
+            self.present(controller, animated: true, completion: nil)
+        }
+        
     }
-    */
 
 }

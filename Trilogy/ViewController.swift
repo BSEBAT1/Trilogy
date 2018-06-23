@@ -24,7 +24,7 @@ class ViewController: UIViewController,UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var button = UIButton(type: .custom)
+        let button = UIButton(type: .custom)
         if let image = UIImage(named:"Linkdn.png"){
             button.setImage(image, for:.normal)
         }
@@ -142,8 +142,7 @@ class ViewController: UIViewController,UIWebViewDelegate {
                             UserDefaults.standard.synchronize()
                             DispatchQueue.main.async {
                                 self.WebView.removeFromSuperview();
-//
-//                                let alert = UIAlertController(title:companylist as String, message:lastnamedict+firstnamedict, preferredStyle:UIAlertControllerStyle.alert)
+
                                 let next = NextViewController()
                                 
                                 self.present(next, animated: false, completion:nil)
