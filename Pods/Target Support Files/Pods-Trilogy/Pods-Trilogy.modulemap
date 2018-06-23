@@ -1,0 +1,6 @@
+framework module Pods_Trilogy {
+  umbrella header "Pods-Trilogy-umbrella.h"
+
+  export *
+  module * { export * }
+}

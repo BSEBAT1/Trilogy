@@ -1,0 +1,39 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - IOSLinkedInAPIFix (2.0.4):
+    - AFNetworking (>= 2.0.0)
+  - LinkedinSwift (1.7.7):
+    - AFNetworking (>= 3.1.0)
+    - IOSLinkedInAPIFix (>= 2.0.4)
+
+DEPENDENCIES:
+  - LinkedinSwift (~> 1.7.7)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - IOSLinkedInAPIFix
+    - LinkedinSwift
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  IOSLinkedInAPIFix: a520fd805a03dade35f42904c7d89ded2a84c752
+  LinkedinSwift: bab5724c2b18335233d02fa59a2cb3fbbccd9219
+
+PODFILE CHECKSUM: cbfb2b488dcc5445e0e63618d9b5c2f2b58a85e4
+
+COCOAPODS: 1.5.2
