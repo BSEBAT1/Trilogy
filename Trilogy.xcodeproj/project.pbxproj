@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5260CF3420DEE6BD0090CE28 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260CF3320DEE6BD0090CE28 /* LandingController.swift */; };
+		526CC64820E13F3100A36C0E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64720E13F3100A36C0E /* SwiftyJSON.swift */; };
+		526CC64A20E1422700A36C0E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64920E1422700A36C0E /* NetworkingManager.swift */; };
+		526CC64C20E167F700A36C0E /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */; };
 		52A8E1D520CF044000B3AE3F /* li-ios-sdk-1.0.7-release in Resources */ = {isa = PBXBuildFile; fileRef = 52A8E1D420CF044000B3AE3F /* li-ios-sdk-1.0.7-release */; };
-		52A8E1D720CF078200B3AE3F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8E1D620CF078200B3AE3F /* WebViewController.swift */; };
 		52CC96AE20D3583E00113316 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC96AD20D3583E00113316 /* NextViewController.swift */; };
 		52F50DCC20CECB4100F626F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F50DCB20CECB4100F626F6 /* AppDelegate.swift */; };
 		52F50DCE20CECB4100F626F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F50DCD20CECB4100F626F6 /* ViewController.swift */; };
@@ -49,8 +51,11 @@
 		2AFE6DC9DE6345E4D62333A1 /* Pods-Trilogy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trilogy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trilogy/Pods-Trilogy.debug.xcconfig"; sourceTree = "<group>"; };
 		35B8EC419ABA5D0F528BE8EF /* Pods_TrilogyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrilogyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5260CF3320DEE6BD0090CE28 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
+		526CC64620E13F3100A36C0E /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = ../../../ios/SwiftyJSON.h; sourceTree = "<group>"; };
+		526CC64720E13F3100A36C0E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../../ios/SwiftyJSON.swift; sourceTree = "<group>"; };
+		526CC64920E1422700A36C0E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		52A8E1D420CF044000B3AE3F /* li-ios-sdk-1.0.7-release */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "li-ios-sdk-1.0.7-release"; path = "../../li-ios-sdk-1.0.7-release"; sourceTree = "<group>"; };
-		52A8E1D620CF078200B3AE3F /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		52CC96AD20D3583E00113316 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		52F50DC820CECB4100F626F6 /* Trilogy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trilogy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F50DCB20CECB4100F626F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,11 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		526CC64520E13E9200A36C0E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				526CC64620E13F3100A36C0E /* SwiftyJSON.h */,
+				526CC64720E13F3100A36C0E /* SwiftyJSON.swift */,
+				526CC64920E1422700A36C0E /* NetworkingManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		52CC96AF20D3597300113316 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52F50DCD20CECB4100F626F6 /* ViewController.swift */,
 				52CC96AD20D3583E00113316 /* NextViewController.swift */,
 				5260CF3320DEE6BD0090CE28 /* LandingController.swift */,
+				526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,11 +137,10 @@
 		52F50DCA20CECB4100F626F6 /* Trilogy */ = {
 			isa = PBXGroup;
 			children = (
+				52F50DCB20CECB4100F626F6 /* AppDelegate.swift */,
+				526CC64520E13E9200A36C0E /* Networking */,
 				52CC96AF20D3597300113316 /* Views */,
 				52A8E1D420CF044000B3AE3F /* li-ios-sdk-1.0.7-release */,
-				52F50DCB20CECB4100F626F6 /* AppDelegate.swift */,
-				52A8E1D620CF078200B3AE3F /* WebViewController.swift */,
-				52F50DCD20CECB4100F626F6 /* ViewController.swift */,
 				52F50DCF20CECB4100F626F6 /* Main.storyboard */,
 				52F50DD220CECB4300F626F6 /* Assets.xcassets */,
 				52F50DD420CECB4300F626F6 /* LaunchScreen.storyboard */,
@@ -333,8 +349,10 @@
 			files = (
 				52F50DCE20CECB4100F626F6 /* ViewController.swift in Sources */,
 				52CC96AE20D3583E00113316 /* NextViewController.swift in Sources */,
-				52A8E1D720CF078200B3AE3F /* WebViewController.swift in Sources */,
 				5260CF3420DEE6BD0090CE28 /* LandingController.swift in Sources */,
+				526CC64A20E1422700A36C0E /* NetworkingManager.swift in Sources */,
+				526CC64820E13F3100A36C0E /* SwiftyJSON.swift in Sources */,
+				526CC64C20E167F700A36C0E /* TermsAndConditionsViewController.swift in Sources */,
 				52F50DCC20CECB4100F626F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
