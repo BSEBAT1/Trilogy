@@ -109,7 +109,7 @@ class NextViewController: UIViewController {
     @objc func tapDetected() {
         DispatchQueue.main.async {
             let main = UIStoryboard(name:"Main" , bundle:nil)
-            let controller = main.instantiateViewController(withIdentifier: "land")
+            let controller = main.instantiateViewController(withIdentifier: "terms")
             self.present(controller, animated: true, completion: nil)
         }
         

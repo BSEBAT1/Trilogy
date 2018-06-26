@@ -71,10 +71,10 @@
             </objects>
             <point key="canvasLocation" x="3473" y="-234"/>
         </scene>
-        <!--View Controller-->
+        <!--Terms And Conditions View Controller-->
         <scene sceneID="0jp-nz-stg">
             <objects>
-                <viewController id="Uie-a4-gA8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="terms" id="Uie-a4-gA8" customClass="TermsAndConditionsViewController" customModule="Trilogy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eyx-id-PXT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
