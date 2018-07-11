@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Alamofire (4.7.2)
   - IOSLinkedInAPIFix (2.0.4):
     - AFNetworking (>= 2.0.0)
   - LinkedinSwift (1.7.7):
@@ -21,19 +22,22 @@ PODS:
     - IOSLinkedInAPIFix (>= 2.0.4)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.7)
   - LinkedinSwift (~> 1.7.7)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - Alamofire
     - IOSLinkedInAPIFix
     - LinkedinSwift
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   IOSLinkedInAPIFix: a520fd805a03dade35f42904c7d89ded2a84c752
   LinkedinSwift: bab5724c2b18335233d02fa59a2cb3fbbccd9219
 
-PODFILE CHECKSUM: cbfb2b488dcc5445e0e63618d9b5c2f2b58a85e4
+PODFILE CHECKSUM: 535502d682d4e59e483268681a1fc1567ca24391
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3
