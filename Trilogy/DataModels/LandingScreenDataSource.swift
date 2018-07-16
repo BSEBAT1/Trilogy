@@ -12,7 +12,7 @@ class LandingScreenDataSource: NSObject, UITableViewDataSource {
 
     private let cellIdentifier = "SelectionCell"
 
-    private var items: [AreaSelection] = [AreaSelection(title: "Manhattan", checkboxes:["Colombus Circle", "Grand Central", "Penn Plaza", "Plaza District", "Times Square", "UN Plaza", "Select ALL"]), AreaSelection(title: "Midtown South", checkboxes:["Chelsea", "Gramercy", "Murray Hill", "Select ALL"]), AreaSelection(title: "Uptown", checkboxes:["Upper East Side", "Upper West Side ", "Select ALL"]), AreaSelection(title: "DownTown", checkboxes:["City Hall", "Financial District", "Greenwich Village", "Harlem", "Hudson Square", "Insurance District", "World Trade Center", "Select ALL"]), AreaSelection(title: "Brooklyn", checkboxes:["Downtown BK"])
+    private var items: [AreaSelection] = [AreaSelection(title: "LOCATION", checkboxes:[]),AreaSelection(title: "Manhattan", checkboxes:["Colombus Circle", "Grand Central", "Penn Plaza", "Plaza District", "Times Square", "UN Plaza", "Select ALL"]), AreaSelection(title: "Midtown South", checkboxes:["Chelsea", "Gramercy", "Murray Hill", "Select ALL"]), AreaSelection(title: "Uptown", checkboxes:["Upper East Side", "Upper West Side ", "Select ALL"]), AreaSelection(title: "DownTown", checkboxes:["City Hall", "Financial District", "Greenwich Village", "Harlem", "Hudson Square", "Insurance District", "World Trade Center", "Select ALL"]), AreaSelection(title: "Brooklyn", checkboxes:["Downtown BK"])
     ]
 
     //Mark TableView Methods

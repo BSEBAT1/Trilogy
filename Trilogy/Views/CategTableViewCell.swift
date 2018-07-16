@@ -34,6 +34,8 @@ class CategTableViewCell: UITableViewCell {
 
     private let expandedViewIndex: Int = 1
 
+    var canToggle: Bool = true
+
     enum CellState {
         case collapsed
         case expanded
@@ -54,6 +56,10 @@ class CategTableViewCell: UITableViewCell {
 
         titleLabel.text = name
 
+        if name == "LOCATION" {
+            canToggle = false
+        }
+
         let button: [UIButton] = [location1, location2, location3, loctation4, location5, location6, location7, location8]
 
         var index = 0
@@ -68,8 +74,6 @@ class CategTableViewCell: UITableViewCell {
 
             buttonIndex.setTitle(title, for: .normal)
 
-           // buttonIndex.titleLabel?.adjustsFontSizeToFitWidth = true
-
             buttonIndex.sizeToFit()
 
             index = index+1
@@ -79,7 +83,10 @@ class CategTableViewCell: UITableViewCell {
     }
 
     private func toggle() {
+        if canToggle {
         stackView.arrangedSubviews[expandedViewIndex].isHidden = stateIsCollapsed()
+
+        }
         
     }
 
@@ -92,6 +99,8 @@ class CategTableViewCell: UITableViewCell {
     }
 
     override func prepareForReuse() {
+
+        canToggle = true
 
         let buttons: [UIButton] = [location1, location2, location3, loctation4, location5, location6, location7, location8]
 

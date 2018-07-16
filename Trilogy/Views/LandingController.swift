@@ -11,23 +11,39 @@ import UIKit
 class LandingController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
-    
 
    let dataSource = LandingScreenDataSource()
 
     override func viewDidLoad() {
+
         super.viewDidLoad()
+
         tableViewSetup()
+
+//        if let font = UIFont(name: "Helvetica-Bold", size: 12) {
+//            print("font");
+//
+//        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: font]
+//
+//        }
     }
 
+
+    override func viewWillAppear(_ animated: Bool) {
+
+        let color = UIColor(red:0.26, green:0.34, blue:0.42, alpha:1.0)
+        super.viewWillAppear(animated)
+        let nav = self.navigationController?.navigationBar
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: color, NSAttributedStringKey.backgroundColor: UIColor.white]
+
+    }
     
   //Mark Load UI Setup Views
 
     private func tableViewSetup() {
 
         tableView.delegate = self
-
-        self.title = "TENANT: SEARCH PREFERENCES"
 
         tableView.dataSource = dataSource
 
