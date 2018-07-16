@@ -27,8 +27,6 @@ class LandingController: UIViewController {
 
         tableView.delegate = self
 
-        self.title = "TENANT: SEARCH PREFERENCES"
-
         tableView.dataSource = dataSource
 
         tableView.rowHeight = UITableViewAutomaticDimension

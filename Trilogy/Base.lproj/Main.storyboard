@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4338" y="-225"/>
+            <point key="canvasLocation" x="5276" y="-225.33733133433284"/>
         </scene>
         <!--Next View Controller-->
         <scene sceneID="pgb-FG-gHj">
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="3473" y="447"/>
         </scene>
-        <!--Item 1-->
+        <!--SEARCH SURVEY CRITERIA-->
         <scene sceneID="g4r-2O-liH">
             <objects>
                 <viewController id="eut-iz-skm" customClass="LandingController" customModule="Trilogy" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rh5-qi-6UR">
-                                <rect key="frame" x="0.0" y="71" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="137" width="375" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectionCell" rowHeight="444" id="ZW9-MD-Jxk" customClass="CategTableViewCell" customModule="Trilogy" customModuleProvider="target">
@@ -189,24 +189,48 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuz-Gt-jDt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQI-2B-LeO">
+                                        <rect key="frame" x="18" y="8" width="150" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="eEh-Hl-Rx4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="8oG-yi-vza"/>
+                                    <constraint firstItem="cQI-2B-LeO" firstAttribute="leading" secondItem="tuz-Gt-jDt" secondAttribute="leading" constant="18" id="O5Y-Yn-zPa"/>
+                                    <constraint firstItem="cQI-2B-LeO" firstAttribute="bottom" secondItem="tuz-Gt-jDt" secondAttribute="bottomMargin" id="cRy-HC-a21"/>
+                                    <constraint firstItem="cQI-2B-LeO" firstAttribute="top" secondItem="tuz-Gt-jDt" secondAttribute="topMargin" id="hPw-lS-OMF"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rh5-qi-6UR" firstAttribute="bottom" secondItem="Svh-pl-JNE" secondAttribute="bottom" id="55e-ci-J8Y"/>
+                            <constraint firstItem="tuz-Gt-jDt" firstAttribute="trailing" secondItem="Svh-pl-JNE" secondAttribute="trailing" id="ITd-uD-iA1"/>
                             <constraint firstAttribute="trailing" secondItem="Rh5-qi-6UR" secondAttribute="trailing" id="YLF-5M-pJE"/>
+                            <constraint firstItem="tuz-Gt-jDt" firstAttribute="top" secondItem="Svh-pl-JNE" secondAttribute="top" id="ZHd-HP-N0s"/>
+                            <constraint firstItem="tuz-Gt-jDt" firstAttribute="leading" secondItem="Svh-pl-JNE" secondAttribute="leading" id="iVG-7r-Qb6"/>
                             <constraint firstItem="Rh5-qi-6UR" firstAttribute="leading" secondItem="Lxf-cg-cyL" secondAttribute="leading" id="rwf-Yc-7ML"/>
-                            <constraint firstItem="Rh5-qi-6UR" firstAttribute="top" secondItem="Lxf-cg-cyL" secondAttribute="top" constant="71" id="zi6-Sd-AP5"/>
+                            <constraint firstItem="Rh5-qi-6UR" firstAttribute="top" secondItem="tuz-Gt-jDt" secondAttribute="bottom" constant="8" symbolic="YES" id="yeq-hI-N9e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Svh-pl-JNE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="au8-9N-PzN"/>
+                    <navigationItem key="navigationItem" title="SEARCH SURVEY CRITERIA" id="LUu-xq-OsA"/>
                     <connections>
                         <outlet property="tableView" destination="Rh5-qi-6UR" id="wds-sG-JN3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Prk-H1-Kit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3472.8000000000002" y="-234.33283358320841"/>
+            <point key="canvasLocation" x="4412" y="-234.33283358320841"/>
         </scene>
         <!--Terms And Conditions View Controller-->
         <scene sceneID="0jp-nz-stg">
@@ -233,13 +257,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="eut-iz-skm" kind="relationship" relationship="viewControllers" id="yEm-lK-1ww"/>
+                        <segue destination="aKN-Hd-RCy" kind="relationship" relationship="viewControllers" id="yEm-lK-1ww"/>
                         <segue destination="MXm-3I-OIL" kind="relationship" relationship="viewControllers" id="RK4-Py-EQt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ax-Tw-OXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2708" y="32"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Lcd-OW-tYk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aKN-Hd-RCy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item 1" id="au8-9N-PzN"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DPD-sn-FAA">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eut-iz-skm" kind="relationship" relationship="rootViewController" id="4mD-Da-wv6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SVd-RB-eNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3472.8000000000002" y="-234.33283358320841"/>
         </scene>
     </scenes>
 </document>
