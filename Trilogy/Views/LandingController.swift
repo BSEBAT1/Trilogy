@@ -8,19 +8,59 @@
 
 import UIKit
 
-class LandingController: UITabBarController {
+class LandingController: UIViewController {
+
+    @IBOutlet var tableView: UITableView!
+    
+
+   let dataSource = LandingScreenDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor.white
-
-        // Do any additional setup after loading the view.
+        tableViewSetup()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+  //Mark Load UI Setup Views
 
+    private func tableViewSetup() {
+
+        tableView.delegate = self
+
+        tableView.dataSource = dataSource
+
+        tableView.rowHeight = UITableViewAutomaticDimension
+
+        tableView.estimatedRowHeight = 350
+
+        tableView.separatorStyle = .none
+
+        tableView.backgroundView?.backgroundColor = UIColor.black
+
+    }
+    
 }
+
+extension LandingController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CategTableViewCell
+
+        cell.state = .expanded
+        dataSource.addExpandedIndexPath(indexPath)
+
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! CategTableViewCell
+
+        cell.state = .collapsed
+        dataSource.removeExpandedIndexPath(indexPath)
+
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+}
+

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController,UIWebViewDelegate {
     
@@ -55,19 +56,35 @@ class ViewController: UIViewController,UIWebViewDelegate {
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
         
-        if UserDefaults.standard.object(forKey: "firstName") != nil   {
-            let firstname:String = UserDefaults.standard.object(forKey:"firstName") as! String
-            let lastname:String = UserDefaults.standard.object(forKey:"lastName") as! String
-            let company:String = UserDefaults.standard.object(forKey:"company") as! String
+        if UserDefaults.standard.object(forKey: "id") != nil {
+            let firstname:String? = UserDefaults.standard.object(forKey:"firstName") as? String
+            let lastname:String? = UserDefaults.standard.object(forKey:"lastName") as? String
+            let company:String? = UserDefaults.standard.object(forKey:"company") as? String
             
             DispatchQueue.main.async {
                 
                 self.WebView.removeFromSuperview()
-//                let alert = UIAlertController(title:company as! String, message:firstname as! String!+lastname as! String, preferredStyle:UIAlertControllerStyle.alert)
-                let alert = self.storyboard?.instantiateViewController(withIdentifier:"next") as! NextViewController
-                self.present(alert, animated: false, completion:nil)
-            
+
+                let parameters: [String: Any] = [
+                    "firstname": firstname ?? NSNull(),
+                    "linkedin_id": "ali1234567812",
+                    "lastname": lastname ?? NSNull(),
+                    "company": company ?? NSNull(),
+                    "email_id": "hko219@nyu.edu",
+                    "user_type": "tenant",
+                    "phone_number": "999 111 9999"
+                ]
+
+                Alamofire.request("http://206.81.9.103:8080/TrilogyWebService/User/add", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                    .responseJSON { response in
+                        print(response)
+
+                        let alert = self.storyboard?.instantiateViewController(withIdentifier:"next") as! NextViewController
+
+                        self.present(alert, animated: false, completion:nil)
+                }
         }
+
         }
         
         button.translatesAutoresizingMaskIntoConstraints=false;
@@ -109,8 +126,7 @@ class ViewController: UIViewController,UIWebViewDelegate {
             req.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
                 // Initialize a NSURLSession object.
                 let session = URLSession(configuration: URLSessionConfiguration.default)
-    
-                
+
                 // Make the request.
                 let task: URLSessionDataTask = session.dataTask(with: req as URLRequest) { (data, response, error) -> Void in
                     
@@ -119,34 +135,47 @@ class ViewController: UIViewController,UIWebViewDelegate {
                     if statusCode == 200 {
                         // Convert the received JSON data into a dictionary.
                         do {
-                            
+
                             let dataDictionary:[String:Any]? = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any]
                             
-                            let id:String = dataDictionary!["id"] as! String
+                            if let id:String = dataDictionary!["id"] as? String {
+
+                                UserDefaults.standard.set(id, forKey:"id")
+                                UserDefaults.standard.synchronize()
+
+                            if let profiledictionary:NSDictionary = dataDictionary!["positions"] as? NSDictionary {
+
+                            if let profilevalues:NSArray = profiledictionary["values"] as? NSArray {
+
+                            if let dictionary = profilevalues[0] as? NSDictionary {
                             
-                            let profiledictionary:NSDictionary = dataDictionary!["positions"] as! NSDictionary
-                             let profilevalues:NSArray = profiledictionary["values"] as! NSArray
-                            let dictionary = profilevalues[0] as! NSDictionary;
+                            if let companies = dictionary["company"] as? NSDictionary {
                             
-                            let companies = dictionary["company"] as! NSDictionary
+                            if let companylist = companies["name"]as? NSString {
                             
-                            let companylist = companies["name"]as! NSString
-                            
-                            let firstnamedict = dataDictionary!["lastName"] as! String
-                            let lastnamedict = dataDictionary!["firstName"] as! String
+                            if let firstnamedict = dataDictionary!["lastName"] as? String {
+                          if let lastnamedict = dataDictionary!["firstName"] as? String {
                           
                             UserDefaults.standard.set(companylist, forKey: "company")
                               UserDefaults.standard.set(firstnamedict, forKey: "lastName")
                             UserDefaults.standard.set(lastnamedict, forKey: "firstName")
-                            UserDefaults.standard.set(id, forKey:"id")
                             UserDefaults.standard.synchronize()
+                            }
+                            }
+                            }
+                            }
+                            }
+                            }
+                            }
+                            }
+
                             DispatchQueue.main.async {
+
                                 self.WebView.removeFromSuperview();
 
                                 let next = NextViewController()
                                 
                                 self.present(next, animated: false, completion:nil)
-                                
                             }
                         }
                         catch {

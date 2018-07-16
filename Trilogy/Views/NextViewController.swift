@@ -19,7 +19,7 @@ class NextViewController: UIViewController {
         textlabel.textAlignment = .center
         textlabel.font = UIFont(name: "Futura-Medium", size:28)
         let infolabel = UILabel()
-        infolabel.text = "The Trilogy research team has combined thousands of listings for mroe then 80 spaces requirments that vary by size, location, budget, term, and condition and timing."
+        infolabel.text = "The Trilogy research team has combined thousands of listings for more then 80 spaces requirments that vary by size, location, budget, term, and condition and timing."
         infolabel.textColor=UIColor.white
         infolabel.font = UIFont(name: "Helvetica-Light", size:24)
         infolabel.textAlignment = .center
@@ -110,6 +110,7 @@ class NextViewController: UIViewController {
         DispatchQueue.main.async {
             let main = UIStoryboard(name:"Main" , bundle:nil)
             let controller = main.instantiateViewController(withIdentifier: "terms")
+          
             self.present(controller, animated: true, completion: nil)
         }
         

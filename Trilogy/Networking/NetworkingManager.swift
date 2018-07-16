@@ -17,9 +17,4 @@ class NetworkingManager: NSObject {
         super.init()
 
     }
-
-    func beginNetworking() {
-
-
-    }
 }
