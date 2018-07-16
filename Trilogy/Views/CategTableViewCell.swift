@@ -14,19 +14,21 @@ class CategTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
 
-    @IBOutlet weak var Location1: UIButton!
+    @IBOutlet weak var location1: UIButton!
 
-    @IBOutlet weak var Location2: UIButton!
+    @IBOutlet weak var location2: UIButton!
 
-    @IBOutlet weak var Location3: UIButton!
+    @IBOutlet weak var location3: UIButton!
 
-    @IBOutlet weak var Loctation4: UIButton!
+    @IBOutlet weak var loctation4: UIButton!
 
-    @IBOutlet weak var Location5: UIButton!
+    @IBOutlet weak var location5: UIButton!
 
-    @IBOutlet weak var Location6: UIButton!
+    @IBOutlet weak var location6: UIButton!
 
-    @IBOutlet weak var Location7: UIButton!
+    @IBOutlet weak var location7: UIButton!
+
+    @IBOutlet weak var location8: UIButton!
 
     @IBOutlet weak var containerViewd: UIView!
 
@@ -49,7 +51,30 @@ class CategTableViewCell: UITableViewCell {
     }
 
     func update(name: String, buttons: Array<Any>) {
+
         titleLabel.text = name
+
+        let button: [UIButton] = [location1, location2, location3, loctation4, location5, location6, location7, location8]
+
+        var index = 0
+
+        while index < buttons.count {
+
+            let buttonIndex = button[index]
+
+            buttonIndex.isHidden = false
+
+            let title = buttons[index] as! String
+
+            buttonIndex.setTitle(title, for: .normal)
+
+           // buttonIndex.titleLabel?.adjustsFontSizeToFitWidth = true
+
+            buttonIndex.sizeToFit()
+
+            index = index+1
+
+        }
 
     }
 
@@ -60,6 +85,22 @@ class CategTableViewCell: UITableViewCell {
 
     private func stateIsCollapsed() -> Bool {
         return state == .collapsed
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
+    override func prepareForReuse() {
+
+        let buttons: [UIButton] = [location1, location2, location3, loctation4, location5, location6, location7, location8]
+
+        for views in buttons {
+
+            views.isHidden = true
+
+        }
+
     }
 
 }

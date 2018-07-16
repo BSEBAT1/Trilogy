@@ -55,29 +55,48 @@ class ViewController: UIViewController,UIWebViewDelegate {
         imageView.center = view.center
         view.addSubview(imageView)
         self.view.sendSubview(toBack: imageView)
+
+        if UserDefaults.standard.object(forKey: "trilogyID") != nil {
+            DispatchQueue.main.async {
+
+                let alert = self.storyboard?.instantiateViewController(withIdentifier:"next") as! NextViewController
+
+                self.present(alert, animated: false, completion:nil)
+            }
+        }
         
         if UserDefaults.standard.object(forKey: "id") != nil {
             let firstname:String? = UserDefaults.standard.object(forKey:"firstName") as? String
             let lastname:String? = UserDefaults.standard.object(forKey:"lastName") as? String
             let company:String? = UserDefaults.standard.object(forKey:"company") as? String
-            
+            let linkdID:String? = UserDefaults.standard.object(forKey:"id") as? String
+            let email: String? = UserDefaults.standard.object(forKey:"email") as? String
+
             DispatchQueue.main.async {
                 
                 self.WebView.removeFromSuperview()
 
                 let parameters: [String: Any] = [
                     "firstname": firstname ?? NSNull(),
-                    "linkedin_id": "ali1234567812",
+                    "linkedin_id": linkdID ?? NSNull(),
                     "lastname": lastname ?? NSNull(),
                     "company": company ?? NSNull(),
-                    "email_id": "hko219@nyu.edu",
                     "user_type": "tenant",
-                    "phone_number": "999 111 9999"
+                    "email_id": email ?? NSNull()
                 ]
 
-                Alamofire.request("http://206.81.9.103:8080/TrilogyWebService/User/add", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+                Alamofire.request("http://meettrilogy.com:8080/TrilogyWebService/User/add", method: .post, parameters: parameters, encoding: JSONEncoding.default)
                     .responseJSON { response in
-                        print(response)
+
+                        if let result = response.result.value {
+                            let JSON = result as! NSDictionary
+
+                            let trilogyID = JSON["userID"] as! Int
+
+                            UserDefaults.standard.set(trilogyID, forKey:"trilogyID")
+
+                            UserDefaults.standard.synchronize()
+                        }
 
                         let alert = self.storyboard?.instantiateViewController(withIdentifier:"next") as! NextViewController
 
@@ -137,8 +156,21 @@ class ViewController: UIViewController,UIWebViewDelegate {
                         do {
 
                             let dataDictionary:[String:Any]? = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? [String : Any]
+
+                            if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) {
+                                if let prettyPrintedData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+                                    print(String(bytes: prettyPrintedData, encoding: String.Encoding.utf8) ?? "NIL")
+                                }
+                            }
                             
                             if let id:String = dataDictionary!["id"] as? String {
+
+                                if let email: String = dataDictionary!["emailAddress"] as? String {
+
+                                    UserDefaults.standard.set(email, forKey:"email")
+                                    UserDefaults.standard.synchronize()
+
+                                }
 
                                 UserDefaults.standard.set(id, forKey:"id")
                                 UserDefaults.standard.synchronize()
@@ -219,7 +251,7 @@ class ViewController: UIViewController,UIWebViewDelegate {
         let state = "linkedin\(Int(NSDate().timeIntervalSince1970))"
         
         // Set preferred scope.
-        let scope = "r_basicprofile"
+        let scope = "r_basicprofile%20r_emailaddress"
         
         // Create the authorization URL string.
         var authorizationURL = "\(authorizationEndPoint)?"

@@ -164,7 +164,7 @@ class TermsAndConditionsViewController: UIViewController, UITextFieldDelegate {
 
             let main = UIStoryboard(name:"Main" , bundle:nil)
 
-            let controller = main.instantiateViewController(withIdentifier: "table")
+            let controller = main.instantiateViewController(withIdentifier: "land")
 
             _ = controller.view
 
