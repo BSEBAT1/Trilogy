@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class CategTableViewCell: UITableViewCell {
 
@@ -32,12 +33,41 @@ class CategTableViewCell: UITableViewCell {
 
     @IBOutlet weak var containerViewd: UIView!
 
+    @IBOutlet var firstImage: UIImageView!
+
+    @IBOutlet var secondImage: UIImageView!
+
+    @IBOutlet var thirdImage: UIImageView!
+
+    @IBOutlet var fourthImage: UIImageView!
+
+    @IBOutlet var fifthImage: UIImageView!
+
+    @IBOutlet var sixthImage: UIImageView!
+
+    @IBOutlet var seventhImage: UIImageView!
+    
+    @IBOutlet var eightImage: UIImageView!
+
     private let expandedViewIndex: Int = 1
+
+    var arrayOptions = Array<Any>()
 
     enum CellState {
         case collapsed
         case expanded
     }
+
+    var selected1 = false
+    var selected2 = false
+    var selected3 = false
+    var selected4 = false
+    var selected5 = false
+    var selected6 = false
+    var selected7 = false
+    var selected8 = false
+
+    var selectAll = false
 
     var state: CellState = .collapsed {
         didSet {
@@ -54,7 +84,11 @@ class CategTableViewCell: UITableViewCell {
 
         titleLabel.text = name
 
+        arrayOptions = buttons
+
         let button: [UIButton] = [location1, location2, location3, loctation4, location5, location6, location7, location8]
+
+        let images: [UIImageView] = [firstImage, secondImage, thirdImage, fourthImage, fifthImage, sixthImage, seventhImage, eightImage]
 
         var index = 0
 
@@ -73,6 +107,30 @@ class CategTableViewCell: UITableViewCell {
             buttonIndex.sizeToFit()
 
             index = index+1
+
+        }
+
+        let strings = ["firstLocation:", "secondLocation:", "thirdLocation:", "fourthLocation:", "fifthLocation:", "sixthLocation:", "seventhLocation:", "eightLocation:"]
+
+        var secondindex = 0
+
+        while secondindex < buttons.count {
+
+            let imageview = images[secondindex]
+
+            let string = strings[secondindex]
+
+            let singleTap = UITapGestureRecognizer(target: self, action: Selector(string))
+
+            singleTap.numberOfTapsRequired = 1
+
+            imageview.isHidden = false
+
+            imageview.isUserInteractionEnabled = true
+            imageview.addGestureRecognizer(singleTap)
+
+
+            secondindex = secondindex+1
 
         }
 
@@ -101,6 +159,336 @@ class CategTableViewCell: UITableViewCell {
 
         }
 
+        let images: [UIImageView] = [firstImage, secondImage, thirdImage, fourthImage, fifthImage, sixthImage, seventhImage, eightImage]
+
+        for imageView in images {
+
+            imageView.isHidden = true
+        }
+
+    }
+    @IBAction func firstLocation(_ sender: Any) {
+
+        if selected1 || selectAll {
+            selected1 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.firstImage.image = imagenamed
+
+                self.firstImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected1 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.firstImage.image = imagenamed
+
+                self.firstImage.setNeedsDisplay()
+
+            }
+        }
+
     }
 
+    @IBAction func secondLocation(_ sender: Any) {
+
+        if selected2 {
+
+            selected2 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.secondImage.image = imagenamed
+
+                self.secondImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected2 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.secondImage.image = imagenamed
+
+                self.secondImage.setNeedsDisplay()
+
+            }
+        }
+
+    }
+
+    @IBAction func thirdLocation(_ sender: Any) {
+
+        if arrayOptions[2] as! String == "Select ALL" {
+
+            selectAll(paramater: 2)
+
+        }
+
+        if selected3 {
+
+            selected3 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.thirdImage.image = imagenamed
+
+                self.thirdImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected3 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.thirdImage.image = imagenamed
+
+                self.thirdImage.setNeedsDisplay()
+
+            }
+        }
+    }
+
+    @IBAction func fourthLocation(_ sender: Any) {
+
+        if arrayOptions[3] as! String == "Select ALL" {
+
+            selectAll(paramater: 3)
+
+        }
+
+        if selected4 {
+
+            selected4 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.fourthImage.image = imagenamed
+
+                self.fourthImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected4 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.fourthImage.image = imagenamed
+
+                self.fourthImage.setNeedsDisplay()
+
+            }
+        }    }
+    @IBAction func fifthLocation(_ sender: Any) {
+
+        if selected5 {
+
+            selected5 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.fifthImage.image = imagenamed
+
+                self.fifthImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected5 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.fifthImage.image = imagenamed
+
+                self.fifthImage.setNeedsDisplay()
+
+            }
+        }
+    }
+
+    @IBAction func sixthLocation(_ sender: Any) {
+
+        if selected6 {
+
+            selected6 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.sixthImage.image = imagenamed
+
+                self.sixthImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected6 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.sixthImage.image = imagenamed
+
+                self.sixthImage.setNeedsDisplay()
+
+            }
+        }
+    }
+
+    @IBAction func seventhLocation(_ sender: Any) {
+
+        if arrayOptions[6] as! String == "Select ALL" {
+
+           selectAll(paramater: 6)
+
+        }
+
+        if selected7 {
+
+            selected7 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.seventhImage.image = imagenamed
+
+                self.seventhImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected7 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.seventhImage.image = imagenamed
+
+                self.seventhImage.setNeedsDisplay()
+
+            }
+        }
+
+    }
+
+    @IBAction func eightLocation(_ sender: Any) {
+
+        if arrayOptions[7] as! String == "Select ALL" {
+
+            selectAll(paramater: 7)
+
+        }
+
+        if selected8 {
+
+            selected8 = false
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.eightImage.image = imagenamed
+
+                self.eightImage.setNeedsDisplay()
+
+            }
+
+        } else {
+            selected8 = true
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.eightImage.image = imagenamed
+
+                self.eightImage.setNeedsDisplay()
+
+            }
+        }
 }
+
+    func selectAll(paramater: Int) {
+
+        let button: [UIButton] = [location1, location2, location3, loctation4, location5, location6, location7, location8]
+
+        let selectedIndex = [selected1, selected2, selected3, selected4, selected5, selected6, selected7, selected8]
+
+        var index = 0
+
+        while index < arrayOptions.count {
+
+        let selectedButton = button[index]
+
+        var bool = selectedIndex[index]
+
+        if !bool && index != paramater {
+
+            selectedButton.sendActions(for: .touchUpInside)
+
+            }
+            index = index+1
+
+        }
+
+        if selectAll {
+
+            var index2 = 0
+
+            while index2 < arrayOptions.count {
+
+                let selectedButton = button[index2]
+
+                var bool = selectedIndex[index2]
+
+                if bool && index2 != paramater {
+
+                    selectedButton.sendActions(for: .touchUpInside)
+
+                }
+                index2 = index2+1
+
+            }
+            selectAll = false
+        } else {
+            selectAll = true
+
+        }
+
+    }
+
+    
+    }
+
+
