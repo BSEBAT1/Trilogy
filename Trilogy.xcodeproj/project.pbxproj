@@ -15,6 +15,7 @@
 		526CC64A20E1422700A36C0E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64920E1422700A36C0E /* NetworkingManager.swift */; };
 		526CC64C20E167F700A36C0E /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */; };
 		52CC96AE20D3583E00113316 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC96AD20D3583E00113316 /* NextViewController.swift */; };
+		52ED040620FF98D2001BF816 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED040520FF98D2001BF816 /* SliderViewController.swift */; };
 		52F50DCC20CECB4100F626F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F50DCB20CECB4100F626F6 /* AppDelegate.swift */; };
 		52F50DCE20CECB4100F626F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F50DCD20CECB4100F626F6 /* ViewController.swift */; };
 		52F50DD120CECB4100F626F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52F50DCF20CECB4100F626F6 /* Main.storyboard */; };
@@ -61,6 +62,7 @@
 		526CC64920E1422700A36C0E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
 		52CC96AD20D3583E00113316 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		52ED040520FF98D2001BF816 /* SliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		52F50DC820CECB4100F626F6 /* Trilogy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trilogy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52F50DCB20CECB4100F626F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52F50DCD20CECB4100F626F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				52CC96AD20D3583E00113316 /* NextViewController.swift */,
 				5260CF3320DEE6BD0090CE28 /* LandingController.swift */,
 				526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */,
+				52ED040520FF98D2001BF816 /* SliderViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -304,10 +307,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Trilogy/Pods-Trilogy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -386,6 +391,7 @@
 				526CC64A20E1422700A36C0E /* NetworkingManager.swift in Sources */,
 				526CC64820E13F3100A36C0E /* SwiftyJSON.swift in Sources */,
 				526CC64C20E167F700A36C0E /* TermsAndConditionsViewController.swift in Sources */,
+				52ED040620FF98D2001BF816 /* SliderViewController.swift in Sources */,
 				52F50DCC20CECB4100F626F6 /* AppDelegate.swift in Sources */,
 				5246519020F7D35E001DC664 /* CategTableViewCell.swift in Sources */,
 				5246518E20F7C196001DC664 /* AreaSelection.swift in Sources */,

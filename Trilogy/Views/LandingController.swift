@@ -68,11 +68,20 @@ extension LandingController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CategTableViewCell
 
+        if cell.state == .expanded {
+            cell.state = .collapsed
+            dataSource.removeExpandedIndexPath(indexPath)
+
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        } else {
+
         cell.state = .expanded
         dataSource.addExpandedIndexPath(indexPath)
 
         tableView.beginUpdates()
         tableView.endUpdates()
+        }
     }
 
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

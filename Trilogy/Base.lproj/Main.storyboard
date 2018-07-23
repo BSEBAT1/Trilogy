@@ -352,7 +352,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8d-zJ-M5R">
-                                <rect key="frame" x="276" y="570" width="83" height="48"/>
+                                <rect key="frame" x="276" y="558" width="83" height="48"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="Next">
@@ -360,11 +360,12 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="buttonPressed:" destination="eut-iz-skm" eventType="touchUpInside" id="8CW-9I-95a"/>
+                                    <segue destination="4Fs-Vx-wvN" kind="show" id="3KB-cP-JE2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -375,9 +376,9 @@
                             <constraint firstItem="tuz-Gt-jDt" firstAttribute="trailing" secondItem="Svh-pl-JNE" secondAttribute="trailing" id="ITd-uD-iA1"/>
                             <constraint firstAttribute="trailing" secondItem="Rh5-qi-6UR" secondAttribute="trailing" id="YLF-5M-pJE"/>
                             <constraint firstItem="tuz-Gt-jDt" firstAttribute="top" secondItem="Svh-pl-JNE" secondAttribute="top" id="ZHd-HP-N0s"/>
-                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="top" secondItem="Rh5-qi-6UR" secondAttribute="bottom" constant="8" symbolic="YES" id="aeX-st-OyX"/>
+                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="top" secondItem="Rh5-qi-6UR" secondAttribute="bottom" constant="-4" id="aeX-st-OyX"/>
                             <constraint firstItem="tuz-Gt-jDt" firstAttribute="leading" secondItem="Svh-pl-JNE" secondAttribute="leading" id="iVG-7r-Qb6"/>
-                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="bottom" secondItem="Svh-pl-JNE" secondAttribute="bottom" id="neX-m8-HZ9"/>
+                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="bottom" secondItem="Svh-pl-JNE" secondAttribute="bottom" constant="-12" id="neX-m8-HZ9"/>
                             <constraint firstItem="Rh5-qi-6UR" firstAttribute="leading" secondItem="Lxf-cg-cyL" secondAttribute="leading" id="rwf-Yc-7ML"/>
                             <constraint firstItem="t8d-zJ-M5R" firstAttribute="leading" secondItem="Svh-pl-JNE" secondAttribute="leading" constant="276" id="sMr-Wl-f59"/>
                             <constraint firstItem="Rh5-qi-6UR" firstAttribute="top" secondItem="tuz-Gt-jDt" secondAttribute="bottom" constant="8" symbolic="YES" id="yeq-hI-N9e"/>
@@ -394,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="4412" y="-234.33283358320841"/>
         </scene>
-        <!--View Controller-->
+        <!--Slider View Controller-->
         <scene sceneID="M2I-Ih-cjU">
             <objects>
-                <viewController id="4Fs-Vx-wvN" sceneMemberID="viewController">
+                <viewController id="4Fs-Vx-wvN" customClass="SliderViewController" customModule="Trilogy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="stg-8O-elI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -407,7 +408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jRQ-HF-Ym8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5155" y="-234"/>
+            <point key="canvasLocation" x="5154.3999999999996" y="-234.33283358320841"/>
         </scene>
         <!--Terms And Conditions View Controller-->
         <scene sceneID="0jp-nz-stg">

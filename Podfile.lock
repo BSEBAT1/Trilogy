@@ -20,10 +20,12 @@ PODS:
   - LinkedinSwift (1.7.7):
     - AFNetworking (>= 3.1.0)
     - IOSLinkedInAPIFix (>= 2.0.4)
+  - RangeSeekSlider (1.7.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - LinkedinSwift (~> 1.7.7)
+  - RangeSeekSlider
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -31,13 +33,15 @@ SPEC REPOS:
     - Alamofire
     - IOSLinkedInAPIFix
     - LinkedinSwift
+    - RangeSeekSlider
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   IOSLinkedInAPIFix: a520fd805a03dade35f42904c7d89ded2a84c752
   LinkedinSwift: bab5724c2b18335233d02fa59a2cb3fbbccd9219
+  RangeSeekSlider: 0386c5a9aa5ebcb2fa5238e8a627280cf46c7c0a
 
-PODFILE CHECKSUM: 535502d682d4e59e483268681a1fc1567ca24391
+PODFILE CHECKSUM: 84f8423e64cf458db68bac4324ec005f4cbbbbe1
 
 COCOAPODS: 1.5.3

@@ -137,11 +137,13 @@ class CategTableViewCell: UITableViewCell {
     }
 
     private func toggle() {
+        
         stackView.arrangedSubviews[expandedViewIndex].isHidden = stateIsCollapsed()
         
     }
 
     private func stateIsCollapsed() -> Bool {
+
         return state == .collapsed
     }
 

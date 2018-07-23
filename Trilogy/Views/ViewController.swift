@@ -29,6 +29,7 @@ class ViewController: UIViewController,UIWebViewDelegate {
         if let image = UIImage(named:"Linkdn.png"){
             button.setImage(image, for:.normal)
         }
+        
         let textlabel = UILabel()
         textlabel.translatesAutoresizingMaskIntoConstraints=false
         textlabel.text="Trilogy App"

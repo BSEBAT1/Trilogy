@@ -4,7 +4,7 @@
 target 'Trilogy' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   pod 'Alamofire', '~> 4.7'
-  
+  pod 'RangeSeekSlider'
   use_frameworks!
 
   # Pods for Trilogy
