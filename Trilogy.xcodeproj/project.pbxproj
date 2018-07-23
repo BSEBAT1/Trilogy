@@ -10,6 +10,7 @@
 		5246518B20F7C079001DC664 /* LandingScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246518A20F7C079001DC664 /* LandingScreenDataSource.swift */; };
 		5246518E20F7C196001DC664 /* AreaSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246518D20F7C196001DC664 /* AreaSelection.swift */; };
 		5246519020F7D35E001DC664 /* CategTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246518F20F7D35E001DC664 /* CategTableViewCell.swift */; };
+		5250EE6A21066EE800ABFDA5 /* SurveySaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250EE6921066EE800ABFDA5 /* SurveySaveViewController.swift */; };
 		5260CF3420DEE6BD0090CE28 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260CF3320DEE6BD0090CE28 /* LandingController.swift */; };
 		526CC64820E13F3100A36C0E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64720E13F3100A36C0E /* SwiftyJSON.swift */; };
 		526CC64A20E1422700A36C0E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64920E1422700A36C0E /* NetworkingManager.swift */; };
@@ -56,6 +57,7 @@
 		5246518A20F7C079001DC664 /* LandingScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenDataSource.swift; sourceTree = "<group>"; };
 		5246518D20F7C196001DC664 /* AreaSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaSelection.swift; sourceTree = "<group>"; };
 		5246518F20F7D35E001DC664 /* CategTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategTableViewCell.swift; sourceTree = "<group>"; };
+		5250EE6921066EE800ABFDA5 /* SurveySaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySaveViewController.swift; sourceTree = "<group>"; };
 		5260CF3320DEE6BD0090CE28 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
 		526CC64620E13F3100A36C0E /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = ../../../ios/SwiftyJSON.h; sourceTree = "<group>"; };
 		526CC64720E13F3100A36C0E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../../ios/SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				5260CF3320DEE6BD0090CE28 /* LandingController.swift */,
 				526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */,
 				52ED040520FF98D2001BF816 /* SliderViewController.swift */,
+				5250EE6921066EE800ABFDA5 /* SurveySaveViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				526CC64C20E167F700A36C0E /* TermsAndConditionsViewController.swift in Sources */,
 				52ED040620FF98D2001BF816 /* SliderViewController.swift in Sources */,
 				52F50DCC20CECB4100F626F6 /* AppDelegate.swift in Sources */,
+				5250EE6A21066EE800ABFDA5 /* SurveySaveViewController.swift in Sources */,
 				5246519020F7D35E001DC664 /* CategTableViewCell.swift in Sources */,
 				5246518E20F7C196001DC664 /* AreaSelection.swift in Sources */,
 			);
