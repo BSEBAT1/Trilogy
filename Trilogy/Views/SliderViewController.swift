@@ -29,6 +29,8 @@ class SliderViewController: UIViewController, UITextFieldDelegate {
 
     let maxcontainerTotal = UITextField()
 
+    let surveyResults = SurveyResultsClass.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -350,8 +352,10 @@ class SliderViewController: UIViewController, UITextFieldDelegate {
         self.mincontainer.text = String(slidervaluemin)+" RSF"
 
         self.maxcontainer.text = String(slidermax)+" RSF"
-
     }
+     self.surveyResults.dictionary.updateValue("area_size_start", forKey: self.mincontainer.text!)
+
+     self.surveyResults.dictionary.updateValue("area_size_end", forKey: self.maxcontainer.text!)
 
     }
 
@@ -368,6 +372,10 @@ class SliderViewController: UIViewController, UITextFieldDelegate {
             self.maxcontainerPrice.text = "$ " + String(slidermax)
 
         }
+
+        self.surveyResults.dictionary.updateValue("budget_start", forKey: self.mincontainerPrice.text!)
+
+        self.surveyResults.dictionary.updateValue("budget_end", forKey: self.maxcontainerPrice.text!)
     }
 
     @objc func slidT () {

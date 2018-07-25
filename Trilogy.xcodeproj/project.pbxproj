@@ -12,6 +12,7 @@
 		5246519020F7D35E001DC664 /* CategTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5246518F20F7D35E001DC664 /* CategTableViewCell.swift */; };
 		5250EE6A21066EE800ABFDA5 /* SurveySaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250EE6921066EE800ABFDA5 /* SurveySaveViewController.swift */; };
 		5260CF3420DEE6BD0090CE28 /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5260CF3320DEE6BD0090CE28 /* LandingController.swift */; };
+		52616B442108E49300FFB7A4 /* SurveyResultsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52616B432108E49300FFB7A4 /* SurveyResultsClass.swift */; };
 		526CC64820E13F3100A36C0E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64720E13F3100A36C0E /* SwiftyJSON.swift */; };
 		526CC64A20E1422700A36C0E /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64920E1422700A36C0E /* NetworkingManager.swift */; };
 		526CC64C20E167F700A36C0E /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */; };
@@ -59,6 +60,7 @@
 		5246518F20F7D35E001DC664 /* CategTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategTableViewCell.swift; sourceTree = "<group>"; };
 		5250EE6921066EE800ABFDA5 /* SurveySaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveySaveViewController.swift; sourceTree = "<group>"; };
 		5260CF3320DEE6BD0090CE28 /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
+		52616B432108E49300FFB7A4 /* SurveyResultsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyResultsClass.swift; sourceTree = "<group>"; };
 		526CC64620E13F3100A36C0E /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftyJSON.h; path = ../../../ios/SwiftyJSON.h; sourceTree = "<group>"; };
 		526CC64720E13F3100A36C0E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = ../../../ios/SwiftyJSON.swift; sourceTree = "<group>"; };
 		526CC64920E1422700A36C0E /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				52F50DCD20CECB4100F626F6 /* ViewController.swift */,
 				52CC96AD20D3583E00113316 /* NextViewController.swift */,
 				5260CF3320DEE6BD0090CE28 /* LandingController.swift */,
+				52616B432108E49300FFB7A4 /* SurveyResultsClass.swift */,
 				526CC64B20E167F700A36C0E /* TermsAndConditionsViewController.swift */,
 				52ED040520FF98D2001BF816 /* SliderViewController.swift */,
 				5250EE6921066EE800ABFDA5 /* SurveySaveViewController.swift */,
@@ -389,6 +392,7 @@
 			files = (
 				5246518B20F7C079001DC664 /* LandingScreenDataSource.swift in Sources */,
 				52F50DCE20CECB4100F626F6 /* ViewController.swift in Sources */,
+				52616B442108E49300FFB7A4 /* SurveyResultsClass.swift in Sources */,
 				52CC96AE20D3583E00113316 /* NextViewController.swift in Sources */,
 				5260CF3420DEE6BD0090CE28 /* LandingController.swift in Sources */,
 				526CC64A20E1422700A36C0E /* NetworkingManager.swift in Sources */,

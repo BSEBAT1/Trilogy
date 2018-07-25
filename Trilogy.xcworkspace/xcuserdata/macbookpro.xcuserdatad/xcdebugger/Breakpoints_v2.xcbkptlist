@@ -377,22 +377,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Trilogy/Views/LandingController.swift"
-            timestampString = "553646325.385096"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/ViewController.swift"
             timestampString = "553625057.4276839"
             startingColumnNumber = "9223372036854775807"
@@ -481,6 +465,38 @@
             endingLineNumber = "90"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in Trilogy.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Trilogy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/Trilogy/Trilogy/Views/ViewController.swift"
+                  timestampString = "554234470.3941261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "2264">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in closure #2 () -&gt; () in Trilogy.ViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Trilogy"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro/Desktop/Trilogy/Trilogy/Views/ViewController.swift"
+                  timestampString = "554234470.3966399"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -529,38 +545,6 @@
             endingLineNumber = "74"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Trilogy.ViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Trilogy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro/Desktop/Trilogy/Trilogy/Views/ViewController.swift"
-                  timestampString = "553644654.909332"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "8804">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Trilogy.ViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "Trilogy"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbookpro/Desktop/Trilogy/Trilogy/Views/ViewController.swift"
-                  timestampString = "553644654.911743"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
-                  offsetFromSymbolStart = "204">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -570,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.38533"
+            timestampString = "554239296.38173"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "update(name:buttons:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -586,11 +570,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385403"
+            timestampString = "554239296.381815"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "prepareForReuse()"
             landmarkType = "7">
          </BreakpointContent>
@@ -602,11 +586,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.3854671"
+            timestampString = "554239296.381883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "370"
-            endingLineNumber = "370"
+            startingLineNumber = "455"
+            endingLineNumber = "455"
             landmarkName = "seventhLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -618,11 +602,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385532"
+            timestampString = "554239296.381951"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
             landmarkName = "firstLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -634,11 +618,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385596"
+            timestampString = "554239296.382018"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
             landmarkName = "secondLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -650,11 +634,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385659"
+            timestampString = "554239296.3820831"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "236"
-            endingLineNumber = "236"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
             landmarkName = "thirdLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,11 +650,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385722"
+            timestampString = "554239296.382162"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
             landmarkName = "fourthLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -682,11 +666,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385785"
+            timestampString = "554239296.382231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "308"
-            endingLineNumber = "308"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
             landmarkName = "fifthLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -698,11 +682,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385848"
+            timestampString = "554239296.382298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "339"
-            endingLineNumber = "339"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "sixthLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -714,11 +698,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.38591"
+            timestampString = "554239296.382364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "408"
-            endingLineNumber = "408"
+            startingLineNumber = "504"
+            endingLineNumber = "504"
             landmarkName = "eightLocation(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -730,11 +714,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.385973"
+            timestampString = "554239296.382431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "447"
-            endingLineNumber = "447"
+            startingLineNumber = "555"
+            endingLineNumber = "555"
             landmarkName = "selectAll(paramater:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -746,11 +730,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.386036"
+            timestampString = "554239296.382499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "457"
-            endingLineNumber = "457"
+            startingLineNumber = "565"
+            endingLineNumber = "565"
             landmarkName = "selectAll(paramater:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -762,11 +746,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.386099"
+            timestampString = "554239296.382573"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "466"
-            endingLineNumber = "466"
+            startingLineNumber = "574"
+            endingLineNumber = "574"
             landmarkName = "selectAll(paramater:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -778,11 +762,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/SliderViewController.swift"
-            timestampString = "554056968.564009"
+            timestampString = "554239296.382654"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -858,11 +842,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.386904"
+            timestampString = "554239296.382789"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
             landmarkName = "stateIsCollapsed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -874,11 +858,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Trilogy/Views/CategTableViewCell.swift"
-            timestampString = "553646325.386965"
+            timestampString = "554239296.3828551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "toggle()"
             landmarkType = "7">
          </BreakpointContent>

@@ -59,6 +59,12 @@ class LandingController: UIViewController {
 
         tableView.backgroundView?.backgroundColor = UIColor.black
 
+        let surveyres = SurveyResultsClass.shared
+
+        var dict = ["Colombus Circle":"0", "Grand Central":"0", "Penn Plaza":"0", "Plaza District":"0", "Times Square":"0", "UN Plaza":"0"]
+
+        surveyres.dictionary = dict
+
     }
     
 }

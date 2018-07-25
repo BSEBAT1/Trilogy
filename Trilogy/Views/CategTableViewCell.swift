@@ -51,6 +51,8 @@ class CategTableViewCell: UITableViewCell {
 
     private let expandedViewIndex: Int = 1
 
+    let surveyResults = SurveyResultsClass()
+
     var arrayOptions = Array<Any>()
 
     enum CellState {
@@ -184,6 +186,13 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[0]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+                print(stringType + "unchecked")
+            }
+
         } else {
             selected1 = true
 
@@ -195,6 +204,14 @@ class CategTableViewCell: UITableViewCell {
 
                 self.firstImage.setNeedsDisplay()
 
+            }
+
+            let string = arrayOptions[0]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
+
+                print(stringType + "checked")
             }
         }
 
@@ -216,6 +233,12 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[1]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+            }
+
         } else {
             selected2 = true
 
@@ -228,8 +251,14 @@ class CategTableViewCell: UITableViewCell {
                 self.secondImage.setNeedsDisplay()
 
             }
-        }
 
+            let string = arrayOptions[1]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
+            }
+
+        }
     }
 
     @IBAction func thirdLocation(_ sender: Any) {
@@ -237,6 +266,12 @@ class CategTableViewCell: UITableViewCell {
         if arrayOptions[2] as! String == "Select ALL" {
 
             selectAll(paramater: 2)
+
+            let string = arrayOptions[2]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+            }
 
         }
 
@@ -254,6 +289,12 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[2]
+
+            if let stringType = string as? String {
+                print(stringType)
+            }
+
         } else {
             selected3 = true
 
@@ -265,6 +306,12 @@ class CategTableViewCell: UITableViewCell {
 
                 self.thirdImage.setNeedsDisplay()
 
+            }
+
+            let string = arrayOptions[2]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
             }
         }
     }
@@ -291,6 +338,12 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[3]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+            }
+
         } else {
             selected4 = true
 
@@ -303,7 +356,14 @@ class CategTableViewCell: UITableViewCell {
                 self.fourthImage.setNeedsDisplay()
 
             }
-        }    }
+
+            let string = arrayOptions[3]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
+            }
+        }
+    }
     @IBAction func fifthLocation(_ sender: Any) {
 
         if selected5 {
@@ -320,6 +380,12 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[4]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+            }
+
         } else {
             selected5 = true
 
@@ -331,6 +397,12 @@ class CategTableViewCell: UITableViewCell {
 
                 self.fifthImage.setNeedsDisplay()
 
+            }
+
+            let string = arrayOptions[4]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
             }
         }
     }
@@ -351,6 +423,12 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[5]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+            }
+
         } else {
             selected6 = true
 
@@ -363,7 +441,14 @@ class CategTableViewCell: UITableViewCell {
                 self.sixthImage.setNeedsDisplay()
 
             }
+
+            let string = arrayOptions[5]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
+            }
         }
+
     }
 
     @IBAction func seventhLocation(_ sender: Any) {
@@ -388,6 +473,12 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[6]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+            }
+
         } else {
             selected7 = true
 
@@ -400,8 +491,13 @@ class CategTableViewCell: UITableViewCell {
                 self.seventhImage.setNeedsDisplay()
 
             }
-        }
 
+            let string = arrayOptions[6]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
+            }
+        }
     }
 
     @IBAction func eightLocation(_ sender: Any) {
@@ -426,6 +522,12 @@ class CategTableViewCell: UITableViewCell {
 
             }
 
+            let string = arrayOptions[7]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("0", forKey: stringType)
+            }
+
         } else {
             selected8 = true
 
@@ -437,6 +539,12 @@ class CategTableViewCell: UITableViewCell {
 
                 self.eightImage.setNeedsDisplay()
 
+            }
+
+            let string = arrayOptions[7]
+
+            if let stringType = string as? String {
+                surveyResults.dictionary.updateValue("1", forKey: stringType)
             }
         }
 }
