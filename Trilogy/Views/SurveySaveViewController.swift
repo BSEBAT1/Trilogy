@@ -353,7 +353,7 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
 
         let dateSeconds = date.timeIntervalSince1970
 
-        print(dateSeconds)
+        SurveyResultsClass.shared.dictionary.updateValue(String(dateSeconds), forKey: "start_date")
     }
 
     //Calls this function when the tap is recognized.
