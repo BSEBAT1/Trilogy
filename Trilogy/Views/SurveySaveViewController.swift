@@ -9,6 +9,7 @@
 import UIKit
 
 class SurveySaveViewController: UIViewController, UITextFieldDelegate {
+
     let surveyResults = SurveyResultsClass()
 
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -16,10 +17,20 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var unchecked1: UIImageView!
 
     @IBOutlet weak var unchecked4: UIImageView!
+
     @IBOutlet weak var unchecked3: UIImageView!
+
     @IBOutlet weak var unchecked2: UIImageView!
     
     @IBOutlet weak var saveSurveyTitle: UITextField!
+
+    @IBOutlet weak var unckeck5: UIImageView!
+
+    @IBOutlet weak var unckeck6: UIImageView!
+
+    @IBOutlet weak var uncheck7: UIImageView!
+
+    @IBOutlet weak var uncheck8: UIImageView!
 
     var office = false
 
@@ -43,6 +54,14 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
 
         saveSurveyTitle.delegate = self
 
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SurveySaveViewController.dismissKeyboard))
+
+        //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
+        //tap.cancelsTouchesInView = false
+
+        view.addGestureRecognizer(tap)
+
     }
 
     @IBAction func officeIntensive(_ sender: Any) {
@@ -58,6 +77,7 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
                 self.unchecked1.setNeedsDisplay()
 
             }
+            surveyResults.dictionary.updateValue("0", forKey: "Office Intensive")
 
                office = false
 
@@ -72,6 +92,7 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
                 self.unchecked1.setNeedsDisplay()
 
             }
+            surveyResults.dictionary.updateValue("1", forKey: "Office Intensive")
 
             office = true
         }
@@ -92,6 +113,8 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
 
             }
 
+            surveyResults.dictionary.updateValue("0", forKey: "Mostly Open")
+
             mostly = false
 
         } else {
@@ -105,6 +128,8 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
                 self.unchecked2.setNeedsDisplay()
 
             }
+
+            surveyResults.dictionary.updateValue("1", forKey: "Mostly Open")
 
             mostly = true
 
@@ -180,21 +205,146 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func oneYear(_ sender: Any) {
 
+        if oneyear {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.unckeck5.image = imagenamed
+
+                self.unckeck5.setNeedsDisplay()
+
+            }
+
+            oneyear = false
+
+        } else {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.unckeck5.image = imagenamed
+
+                self.unckeck5.setNeedsDisplay()
+
+            }
+
+            oneyear = true
+
+        }
+
     }
 
     @IBAction func twoYears(_ sender: Any) {
+
+        if two {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.unckeck6.image = imagenamed
+
+                self.unckeck6.setNeedsDisplay()
+
+            }
+
+            two = false
+
+        } else {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.unckeck6.image = imagenamed
+
+                self.unckeck6.setNeedsDisplay()
+
+            }
+
+            two = true
+
+        }
 
     }
 
     @IBAction func threeYears(_ sender: Any) {
 
+        if three {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.uncheck7.image = imagenamed
+
+                self.uncheck7.setNeedsDisplay()
+
+            }
+
+            three = false
+
+        } else {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.uncheck7.image = imagenamed
+
+                self.uncheck7.setNeedsDisplay()
+
+            }
+
+            three = true
+
+        }
     }
 
     @IBAction func fiveYears(_ sender: Any) {
 
+        if five {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "uncheck" )
+
+                self.uncheck8.image = imagenamed
+
+                self.uncheck8.setNeedsDisplay()
+
+            }
+
+            five = false
+
+        } else {
+
+            DispatchQueue.main.async {
+
+                let imagenamed = UIImage.init(named: "check" )
+
+                self.uncheck8.image = imagenamed
+
+                self.uncheck8.setNeedsDisplay()
+
+            }
+
+            five = true
+
+        }
 
     }
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+       self.saveSurveyTitle.resignFirstResponder()
+        //or
+        //self.view.endEditing(true)
+        return true
+    }
 
 
     @IBAction func datePickerChanged(_ sender: Any) {
@@ -204,6 +354,12 @@ class SurveySaveViewController: UIViewController, UITextFieldDelegate {
         let dateSeconds = date.timeIntervalSince1970
 
         print(dateSeconds)
+    }
+
+    //Calls this function when the tap is recognized.
+  @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
 
 }

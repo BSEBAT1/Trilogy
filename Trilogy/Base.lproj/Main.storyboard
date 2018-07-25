@@ -457,6 +457,9 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Klo-vf-GRo">
                                 <rect key="frame" x="0.0" y="107" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="0qb-ES-GTW"/>
+                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="554064564.82663798">
                                     <!--2018-07-23 18:49:24 +0000-->
                                 </date>
@@ -707,10 +710,14 @@
                     <connections>
                         <outlet property="datePicker" destination="Klo-vf-GRo" id="Vk8-1A-08z"/>
                         <outlet property="saveSurveyTitle" destination="jsz-co-924" id="t3g-LZ-5QX"/>
+                        <outlet property="uncheck7" destination="Kjv-s8-YrI" id="Ee8-Lf-PXf"/>
+                        <outlet property="uncheck8" destination="B16-Pj-e82" id="eO8-9g-d40"/>
                         <outlet property="unchecked1" destination="PVY-Of-wSr" id="0IV-KB-adK"/>
                         <outlet property="unchecked2" destination="H8j-Mv-F6A" id="S9E-MB-1pk"/>
                         <outlet property="unchecked3" destination="4AO-iM-Dc6" id="TLs-vy-DrN"/>
                         <outlet property="unchecked4" destination="Hwy-0M-DyI" id="tCd-Ii-8eE"/>
+                        <outlet property="unckeck5" destination="Yva-GY-C49" id="4RW-nW-QYu"/>
+                        <outlet property="unckeck6" destination="LhA-Vr-2u4" id="qXg-KZ-1Be"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YB6-Hz-k0E" userLabel="First Responder" sceneMemberID="firstResponder"/>
