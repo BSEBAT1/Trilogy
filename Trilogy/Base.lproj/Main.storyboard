@@ -354,6 +354,10 @@
                             <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t8d-zJ-M5R">
                                 <rect key="frame" x="276" y="558" width="83" height="48"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="30Z-OR-tM8"/>
+                                    <constraint firstAttribute="width" constant="83" id="bWT-KC-gFJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -372,15 +376,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rh5-qi-6UR" firstAttribute="bottom" secondItem="Svh-pl-JNE" secondAttribute="bottom" constant="-56" id="55e-ci-J8Y"/>
-                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="trailing" secondItem="Lxf-cg-cyL" secondAttribute="trailingMargin" id="Gti-OU-iBw"/>
                             <constraint firstItem="tuz-Gt-jDt" firstAttribute="trailing" secondItem="Svh-pl-JNE" secondAttribute="trailing" id="ITd-uD-iA1"/>
+                            <constraint firstItem="Svh-pl-JNE" firstAttribute="trailing" secondItem="t8d-zJ-M5R" secondAttribute="trailing" constant="16" id="NWP-em-bkQ"/>
                             <constraint firstAttribute="trailing" secondItem="Rh5-qi-6UR" secondAttribute="trailing" id="YLF-5M-pJE"/>
                             <constraint firstItem="tuz-Gt-jDt" firstAttribute="top" secondItem="Svh-pl-JNE" secondAttribute="top" id="ZHd-HP-N0s"/>
-                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="top" secondItem="Rh5-qi-6UR" secondAttribute="bottom" constant="-4" id="aeX-st-OyX"/>
+                            <constraint firstItem="Svh-pl-JNE" firstAttribute="bottom" secondItem="t8d-zJ-M5R" secondAttribute="bottom" constant="12" id="fgV-rk-Tdm"/>
                             <constraint firstItem="tuz-Gt-jDt" firstAttribute="leading" secondItem="Svh-pl-JNE" secondAttribute="leading" id="iVG-7r-Qb6"/>
-                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="bottom" secondItem="Svh-pl-JNE" secondAttribute="bottom" constant="-12" id="neX-m8-HZ9"/>
                             <constraint firstItem="Rh5-qi-6UR" firstAttribute="leading" secondItem="Lxf-cg-cyL" secondAttribute="leading" id="rwf-Yc-7ML"/>
-                            <constraint firstItem="t8d-zJ-M5R" firstAttribute="leading" secondItem="Svh-pl-JNE" secondAttribute="leading" constant="276" id="sMr-Wl-f59"/>
                             <constraint firstItem="Rh5-qi-6UR" firstAttribute="top" secondItem="tuz-Gt-jDt" secondAttribute="bottom" constant="8" symbolic="YES" id="yeq-hI-N9e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Svh-pl-JNE"/>
